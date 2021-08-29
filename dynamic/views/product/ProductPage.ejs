@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/7fe5a042ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Below Link for Scroll up button -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link type="image/x-icon" href="https://media6.ppl-media.com/mediafiles/ecomm/misc/purplle-16x16.png" rel="shortcut icon">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Washes: Buy Face Washes Online at Best Prices in India | Purplle</title>
+    <link rel="stylesheet" href="/css/ProductPage.css" />
+  </head>
+  <body>
+    <%- include("../../partials/navbar.ejs") %>
+    <!--    Navbar on scrolling -->
+
+    <div class="container">
+      <div class="slider">
+        <div class="sliderMain" id="slider_main_div">
+          <div class="slide left">
+            <span id="leftMoveSlider">&#10094;</span>
+          </div>
+          <div class="slide right">
+            <span id="rightMoveSlider">&#10095;</span>
+          </div>
+          <div class="btm-sliders">
+            <span id="point1"></span>
+            <span id="point2"></span>
+            <span id="point3"></span>
+            <span id="point4"></span>
+            <span id="point5"></span>
+          </div>
+        </div>
+      </div>
+     </div>
+      <div class="gap">
+    
+      </div>
+      <!-- Below button for scroll up button -->
+     <button id="btnScrollToTop">
+      <i class="material-icons">arrow_upward</i>
+     </button>
+
+     <div class="filavBottom">
+      <ul class="filavBottom_links">
+        <div class="fildropdown fildddForRemoveLeftLine">
+        <div class="fildropLink">
+          <li><a href="/product"> Brands <i class="fas fa-sort-down"></i></i></a></li> 
+        </div>
+          <div class="fildropdown-content ">
+            <div class="filproducts-menu-dropDown">
+                 <ul class="filproducts-menu-dropDown-links">
+                    <li ><a href="/product/Lakme">Lakme</a></li>
+                   
+                   <!-- <div class="makeup-content">
+                       <div class="makeup-menu-dropdown">
+                         <ul class="makeup-manu-dropDown-links">
+                             <li> <a href="">test</a></li>
+                             <li> <a href="">test2</a></li>
+                         </ul>
+                       </div>
+                   </div> -->
+                   <li ><a href="/product/Wow">Wow</a></li>
+                   <li ><a href="/product/Mamaearth">Mamaearth</a></li>
+                   <li ><a href="/product/GoodVibes">Good Vibes</a></li>
+                 </ul>
+               </div>
+            </div>
+        </div>
+        
+        <div class="fildropdown">
+          <div class="fildropLink">
+            <li><a href="">Price Range  <i class="fas fa-sort-down"></i></a></li>
+          </div>
+          <div class="fildropdown-content ">
+            <div class="filproducts-menu-dropDown ">
+                 <ul class="filproducts-menu-dropDown-links">
+                 <li ><a href="/product/pr/100">100rs-200rs</a></li>
+                  <li ><a href="/product/pr/200">200rs-300rs</a></li>
+                  <li ><a href="/product/pr/300">300rs & above</a></li>
+                 </ul>
+               </div>
+            </div>
+        </div>
+        <div class="fildropdown">
+         <div class="fildropLink">
+          <li><a href="">Discounts  <i class="fas fa-sort-down"></i></i></a></li>
+         </div>
+          <div class="fildropdown-content ">
+            <div class="filproducts-menu-dropDown ">
+                 <ul class="filproducts-menu-dropDown-links">
+                  <li ><a href="/product/ds/10">10%-20%</a></li>
+                  <li ><a href="/product/ds/20">20%-30%</a></li>
+                 </ul>
+               </div>
+            </div>
+        </div>
+       
+        <div class="fildropdown">
+         <div class="fildropLink">
+          <li><a href="">Sort By Relevance  <i class="fas fa-sort-down"></i></a></li> 
+         </div>
+          <div class="fildropdown-content ">
+            <div class="filproducts-menu-dropDown ">
+                 <ul class="filproducts-menu-dropDown-links">
+                <li ><a href="/product/htl">High to low</a></li>
+                <li  ><a href="/product/lth">low to high</a></li>
+                 </ul>
+               </div>
+            </div>
+        </div>
+      </ul>
+    </div>
+    <div class="gap">
+    
+    </div>
+    <div class="gap2"></div>
+    <div class="container">
+      <h2 class="productHeading">ALL PRODUCTS</h2>
+      
+      <div class="productList" id="productList">
+
+     
+          
+          <% products.forEach((el)=>{%>
+            <div id="gDiv">
+              <img id="gridImage" src=<%=el.image%> alt="">
+              <a href="/cart/<%= el._id%>" onclick="alert('Product added to cart successfully')"><button  id="addToCart"> ADD TO CART</button></a>
+              <p id="proName"><%= el.name%></p>
+              <div id="floatAll">
+                &#x20B9 <h3 id="h333"><%=el.price%></h3>&nbsp
+                  <p id ="opacity"><s><%=el.priceWithDis%></s></p>&nbsp 
+                  <p id = "redColor"><%=el.discount%>% off</p>
+              </div>
+            </div>
+        <%})%>
+
+      </div>
+      <br />
+      <div class="slider">
+        <div class="sliderMain" id="slider_main_div1">
+          <div class="slide left">
+            <span id="leftMoveSlider1">&#10094;</span>
+          </div>
+          <div class="slide right">
+            <span id="rightMoveSlider1">&#10095;</span>
+          </div>
+          <div class="btm-sliders">
+            <span id="point11"></span>
+            <span id="point12"></span>
+            <span id="point13"></span>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+    </div>
+  </body>
+</html>
+<script src="/scripts/ProductPage.js"></script>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Purplle.com: Buy Cosmetic Products & Beauty Products Online In India
+    </title>
+    <link
+      type="image/x-icon"
+      href="https://media6.ppl-media.com/mediafiles/ecomm/misc/purplle-16x16.png"
+      rel="shortcut icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7fe5a042ed.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <link rel="stylesheet" href="/css/addressPage.css" />
+  <body>
+    <%- include("../../partials/address_navbar.ejs")%>
+
+    <div id="container">
+      <div class="step-progressbar">
+        <ul>
+          <li>Login Details</li>
+          <li class="active">Delivery Address</li>
+          <li>Payment Method</li>
+        </ul>
+      </div>
+      <div class="leftdiv">
+        <p class="select">Select a delivery address</p>
+        <div class="address">
+          <div class="details">
+            <span class="font16">BHAWANI SHANKAR</span>
+            <p class="font14">
+              <span>KANKAROLI</span><br />
+              <span>Rajsamand</span><br />
+              <span>Rajasthan-313131</span><br />
+              <span>9876543210</span>
+            </p>
+            <a href="/payment"
+              ><button class="deliver">Deliver to this Address</button></a
+            >
+          </div>
+          <p class="edit">Edit</p>
+          <p class="delete">Delete</p>
+        </div>
+        <p class="addnew"><span class="dot">+</span> ADD NEW ADDRESS</p>
+      </div>
+      <div class="rightdiv">
+        <div class="needhelp">
+          <p>Need Help? 92233 00222</p>
+        </div>
+        <div class="login">
+          <p class="mail">
+            <span class="bold"> Login Details</span><br /><%= checkLogin1.Email%>
+          </p>
+          <p class="change">CHANGE</p>
+        </div>
+        <hr />
+        <div class="showitem bold">
+          <p id="itemCount">Show Items in Order (<%= priceDetail.count%>)</p>
+        </div>
+        <hr />
+        <% console.log(priceDetail)%>
+        <div class="priceDetails bold">
+          <p>Price Details</p>
+        </div>
+        <div class="total_mrp">
+          <div class="t_mrp">Total MRP:</div>
+          <div class="t_price" id="t_price">₹<%= priceDetail.TotalMRP%></div>
+        </div>
+        <div class="savings_on_mrp">
+          <div class="s_mrp">Savings on MRP:</div>
+          <div class="s_price pink" id="s_price">
+            -₹<%= priceDetail.SavingsMRP%>
+          </div>
+        </div>
+        <div class="sub_total">
+          <div class="sub_mrp">Subtotal:</div>
+          <div class="sub_price" id="sub_price">
+            ₹<%= priceDetail.Subtotal%>
+          </div>
+        </div>
+        <div class="shipping_charges">
+          <div class="shipping">Shipping charges:</div>
+          <div class="shipping_price" id="shipping_price">₹49</div>
+        </div>
+        <hr />
+        <div class="order_total">
+          <h3 class="o_total_mrp">Order total:</h3>
+          <h3 class="o_total_price" id="o_total_price">
+            ₹<%= priceDetail.OrderTotal%>
+          </h3>
+        </div>
+        <div class="you_save">
+          <div class="save">You Save:</div>
+          <div class="save_price pink" id="save_price">
+            ₹<%= priceDetail.YouSave%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="/scripts/addressPage.js"></script>

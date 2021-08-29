@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+      Purplle.com: Buy Cosmetic Products & Beauty Products Online In India
+    </title>
+    <link
+      type="image/x-icon"
+      href="https://media6.ppl-media.com/mediafiles/ecomm/misc/purplle-16x16.png"
+      rel="shortcut icon"
+    />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/login.css">
+    </head>
+    <body>
+        <% if(message.length > 0){%>
+            <div class="alertMessage">
+                <h2><%= message%></h2>
+            </div>
+        <%}%>
+        <div id="parent">
+            <div>
+                <button class="btn"> <a href="/" style="text-decoration: none;"><i class="fa fa-close"></i></a></button>
+            </div>
+        <div id="container">
+                <div class="signup">
+                <h2>Login</h2>
+                </div>
+                <div id="inputfield">
+                <form id="form" action="/login/post" method="POST" >
+                    <input type="number"id="mobile" name="Mobile" placeholder="Enter Your Mobile No." required
+                    maxlength="10"
+                    oninput=" if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+                    >
+                    <input type="password" id="password" name="Password"  placeholder="Enter your password"
+                    minlength="8"
+                    required>
+                    <input  type="submit" class="fwb" value="&#8594;"/>
+                </form>
+                </div>
+                    <p class="newuser">New customer? click here to <a href="/signup">SignUp</a></p>
+                
+                <div class="connectwith">Or connect with</div>
+                <div class="social" id="fcb">
+                    <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1542974744_fb-logo.png">
+                    FACEBOOK
+                </div>
+                <div class="social" id="gogl">
+                    <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1542974745_google-logo.png">
+                    GOOGLE
+                </div>
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
+
+<script src="/scripts/login.js">
+ 
+</script>

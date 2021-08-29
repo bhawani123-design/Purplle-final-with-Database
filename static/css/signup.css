@@ -1,0 +1,146 @@
+#patect {
+  background-color: transparent;
+}
+
+form > div {
+  margin: 20px;
+}
+
+.login {
+  clear: both;
+  font-size: 14px;
+  margin-left: 12%;
+  color: #8a8b8b;
+  margin-top: 225px;
+}
+.login > a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ff147b;
+}
+.connectwith {
+  width: 100%;
+  text-align: center;
+  color: #6d7c83;
+  margin-top: 10px;
+}
+
+.social {
+  margin-top: 30px;
+  font-family: Aqleema-Medium;
+  font-size: 20px;
+  margin-left: 20px;
+  color: #6c7a82;
+  vertical-align: middle;
+  line-height: 48px;
+  height: 48px;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+  border-radius: 2px;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: 200px;
+}
+
+.social > img {
+  width: 20px;
+  height: 20px;
+}
+
+#fcb {
+  float: left;
+  margin-left: 30px;
+}
+
+#gogl {
+  float: right;
+  margin-right: 30px;
+}
+
+.signup {
+  font-family: Aqleema-Medium;
+  font-size: 20px;
+  color: #2c414c;
+  /* text-align: center; */
+  margin-left: 50px;
+
+  margin-bottom: 0;
+  padding-top: 5px;
+}
+
+.signup h2 {
+  margin: 15px 0px 0px 10px;
+}
+
+.btn {
+  float: right;
+  background-color: #fff;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 34.1%;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: red;
+}
+
+.fwb:hover {
+  background-color: #e40980 !important;
+  color: #fff !important;
+}
+.fwb {
+  float: right !important;
+  margin-right: 70px !important;
+  height: 52px;
+  width: 52px !important;
+  line-height: 31px !important;
+  background-color: #adc1ca5e !important;
+  color: #e40980;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 25px !important;
+  cursor: pointer !important;
+  margin-top: -44px !important;
+  padding-bottom: 15px !important;
+}
+body {
+  background-color: rgb(240, 240, 240);
+}
+#container {
+  width: 530px;
+  height: 450px;
+  background-color: white;
+  margin-left: 30%;
+  margin-top: 8%;
+  box-shadow: 0px 0px 5px #b0b9bb;
+}
+#inputfield input {
+  font-size: 18px;
+  padding: 10px 0;
+  float: left;
+  width: 60%;
+  border: none;
+  font-family: "Aqleema-Regular";
+  color: -internal-light-dark(black, white);
+  cursor: text;
+  font: 400 13.3333px Arial;
+  margin-left: 60px;
+  margin-top: 30px;
+  background-color: whitesmoke;
+}
+
+.alertMessage {
+  width: 500px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  height: 50px;
+  background-color: e40980;
+  box-shadow: 0px 0px 5px #b0b9bb;
+  color: #47555c;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Purplle.com: Buy Cosmetic Products & Beauty Products Online In India
+    </title>
+    <link
+      type="image/x-icon"
+      href="https://media6.ppl-media.com/mediafiles/ecomm/misc/purplle-16x16.png"
+      rel="shortcut icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/7fe5a042ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7fe5a042ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/thankYouPage.css" />
+  </head>
+  <body>
+    <div class="navMiddleContainer">
+      <div class="spaceBetweenNav"></div>
+      <div class="navMid">
+        <img
+          onclick="homePage()"
+          src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
+          id="homePageNavigation"
+          alt=""
+        />
+        <img
+          src=" https://media6.ppl-media.com/mediafiles/ecomm/promo/1537798844_try-logo-3x.png"
+          id="tryElite"
+          alt=""
+        />
+      </div>
+
+      <div class="navRight">
+        <div class="icons" id="wishList">
+          <i class="fa fa-search icon" id="search-icon"></i>
+        </div>
+        <div class="icons" id="signUp"><i class="far fa-heart"></i></div>
+        <a href="/login"><div class="icons" id="basket">
+          <i class="far fa-smile"></i>
+        </div></a>
+          <%if(checkLogin1.Email !== undefined){%>
+            <span id="loginId"><%= checkLogin1.Email%> <br> </span>
+            <span id="logoutId"> <a href="/login/logout">Logout</a></span>
+            <%} else {%>
+              <span id="loginId"><a href="/login"><%= checkLogin1%></a> <br> </span>
+          <%} %>
+      </div>
+    </div>
+    <!-- -------------------- -->
+    <div id="thankyou-container">
+      <div class="thankyou">
+        <div class="dot">
+          <span class="symbol">&#10003;</span>
+        </div>
+        <div class="para">
+          <p>
+            <span class="bold"> Thank You <%= checkLogin1.Email%> !</span><br />Your
+            Order (Order Id 20210717255156) has been placed successfully.
+          </p>
+        </div>
+      </div>
+                  
+            
+
+      <div class="communication">
+        <!-- <span><i class='far fa-envelope-open' style='font-size:50px'>&#xf2b6;</i></span> -->
+        <p>
+          You will shortly receive an order verification E-mail & SMS confirming
+          your order details.
+        </p>
+      </div>
+      <div id="order-summary-container">
+        <div class="order-summary">
+          <p class="head">ORDER SUMMARY</p>
+          <%today = new Date(); date =
+          today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();%>
+
+          <p>Order Date: <%= date%></p>
+
+          <ul>
+            <% products.forEach((el)=>{%>
+            <li><%= el.name%> - <b>count(<%= el.count%>)</b></li>
+            <%})%>
+          </ul>
+        </div>
+        <div class="details">
+          <span class="head">SHIPPING DETAILS</span>
+          <p class="font14">
+            <span>BHAWANI SHANKAR LOHAR </span><br />
+              <span>KANKAROLI</span><br />
+              <span>Rajsamand</span><br />
+              <span>Rajasthan-313131</span><br />
+              <span>9876543210</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <button onclick="homePage()" class="continue">CONTINUE</button>
+  </body>
+</html>
+<script>
+  function homePage() {
+    window.location.href = "/thankyou/remove";
+  }
+</script>

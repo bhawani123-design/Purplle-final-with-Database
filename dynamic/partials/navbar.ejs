@@ -1,0 +1,275 @@
+<div class="nav">
+      <nav>
+        <div class="navUp">
+          <div class="navUpLinks">
+            <i class="fas fa-mobile-alt" id="mobileIcon"></i>
+            <a href="">DOWNLOAD APP</a>
+            |
+            <a href="">SUPPPORT</a>
+            |
+            <a href="">TRACK ORDER</a>
+          </div>
+        </div>
+        <div class="navMiddleContainer">
+          <div class="navLeft">
+            <div class="input-container">
+              <input
+                class="input-field"
+                type="text"
+                placeholder="What are you looking for?"
+                name="search"
+              />
+              <i class="fa fa-search icon" id="search-icon"></i>
+            </div>
+          </div>
+          <div class="spaceBetweenNav"></div>
+          <div class="navMid">
+            <a href="/">
+            <img
+              src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
+              id="homePageNavigation"
+              alt=""
+            />
+            </a>
+            <img
+              src=" https://media6.ppl-media.com/mediafiles/ecomm/promo/1537798844_try-logo-3x.png"
+              id="tryElite"
+              alt=""
+            />
+          </div>
+          <div class="spaceBetweenNav"></div>
+          <div class="navRight">
+            <div class="icons" id="wishList">
+              <i class="far fa-heart"></i>
+            </div>
+            <div class="icons" id="signUp"><a href="/login" style="text-decoration: none; color: rgb(128, 140, 147);"><i class="far fa-smile"></i></a>`</div>
+            <div class="icons" id="basket"><a href="/basket" style="text-decoration: none; color: rgb(128, 140, 147)">
+              <i class="fas fa-shopping-basket" ><span id="sum1"><%= sum1%></span></i></a>
+            </div>
+            <%if(checkLogin1.Email !== undefined){%>
+            <span id="loginId"><%= checkLogin1.Email%> <br> </span>
+            <span id="logoutId"> <a href="/login/logout">Logout</a></span>
+            <%} else {%>
+              <span id="loginId"><a href="/login"><%= checkLogin1%></a> <br> </span>
+            <%} %>
+            
+          </div>
+        </div>
+        <!-- testin -->
+        <div class="navBottom">
+          <ul class="navBottom_links">
+            <div class="dropdown">
+              <li><a href=""> SHOP CATEGORIES </a></li>
+              <div class="dropdown-content shopCategorie">
+                <div class="products-menu-dropDown">
+                     <ul class="products-menu-dropDown-links products-menu-dropDown-links1 ">
+                       <li class="dropLink"><a href="/product"> Make Up</a></li>
+                       <!-- <div class="makeup-content">
+                           <div class="makeup-menu-dropdown">
+                             <ul class="makeup-manu-dropDown-links">
+                                 <li> <a href="">test</a></li>
+                                 <li> <a href="">test2</a></li>
+                             </ul>
+                           </div>
+                       </div> -->
+                       <li><a href="/product">Skin Care</a></li>
+                       <li><a href="/product">Personal Care</a></li>
+                       <li><a href="/product">Men</a></li>
+                       <li><a href="/product">Fragrance</a></li>
+                       <li><a href="/product">Health & Wellness</a></li>
+                       <li><a href="/product">Mom & Baby</a></li>
+                     </ul>
+                     <div class="drop-down-link-container-of-products" >
+                      <div class="drop-down-link-container-of-products-links">
+                        <h5 class="clensers">CLENSERS</h5>
+                         <p><a href="/product">Facewash</a></p>
+                         <p><a href="/product">Concealer</a></p>
+                         <p><a href="/product">BB & Creams</a></p>
+                         <p><a href="/product">Foundation</a></p>
+                         <p><a href="/product">Compact</a></p>
+                         <p><a href="/product">Loose Powder</a></p>
+                      </div>
+                      <div class="drop-down-link-container-of-products-links">
+                        <h5 class="eyecare">EYE CARE</h5>
+                        <p><a href="/product">Eye Masks & Patches</a></p>
+                         <p><a href="/product">Eye Serum</a></p>
+                         <p><a href="/product">Eye Cream</a></p>
+                         <p><a href="/product">Eye Makeup & Remover</a></p>
+                      </div>
+                      <div class="drop-down-link-container-of-products-links">
+                        <h5 class="handcare">HAND & FOOT CARE</h5>
+                        <p><a href="/product">Hand Wash & Soaps</a></p>
+                         <p><a href="/product">Hand Sanitizers</a></p>
+                         <p><a href="/product">Hand Cream</a></p>
+                         <p><a href="/product">Foot Cream and Scrubs</a></p>
+                      </div>
+                      <div class="drop-down-link-container-of-products-links">
+                        <h5 class="toner">TONER & FACE MISTS</h5>
+                        <p><a href="/product">Tones</a></p>
+                         <p><a href="/product">Face Mists</a></p>
+                         <p><a href="/product">Lip Care</a></p>
+                         <p><a href="/product">Lip Balms</a></p>
+                         <p><a href="/product">Lip Scrubs</a></p>
+                      </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+              <li><a href="">BRANDS</a></li>
+              <div class="dropdown-content brands">
+                <div class="products-menu-dropDown brandsImages">
+                     <ul class="products-menu-dropDown-links">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/promo/1502367558_lakme.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1619515921_cloviabotaniqa_logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1542958594_logo-vayam.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226198_sugar-1.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226196_wow-science.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1555930990_nivea-logo-for-website.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226229_plum-3.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1510039591_gv-logo-1.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226150_garnier.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1515076955_logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1611164412_bh-logo-tab-120x55.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226126_ltous.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1481097651_stay-quirky.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1524057339_alps-logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1528376265_purplle-logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1540450028_logo_new.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1626342383_bblunt_120x55.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1626342382_vitress_120x55.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1610961840_sanity-logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1530078890_australis-logo.jpg" alt="">
+                     </ul>
+                   </div>
+                </div>
+            </div>
+            <li><a href="">OFFERS</a></li>
+            <li><a href="">NEW</a></li>
+            <li><a href="">SPLURGE</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+<!--    Navbar on scrolling -->
+  <div id="navbar">
+      <div class="flex">
+        <div class="navMid">
+          <a href="/">
+            <img
+              src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
+              id="homePageNavigation1"
+              alt=""
+            /></a>
+            <img
+              src=" https://media6.ppl-media.com/mediafiles/ecomm/promo/1537798844_try-logo-3x.png"
+              id="tryElite"
+              alt=""
+            />
+          </div>
+        <div class="navBottom">
+          <ul class="navBottom_links">
+            <div class="dropdown">
+              <li><a href=""> SHOP CATEGORIES </a></li>
+              <div class="dropdown-content shopCategorie">
+                <div class="products-menu-dropDown">
+                     <ul class="products-menu-dropDown-links products-menu-dropDown-links1">
+                       <li class="dropLink"><a href="/product"> Make Up</a></li>
+                       <!-- <div class="makeup-content">
+                           <div class="makeup-menu-dropdown">
+                             <ul class="makeup-manu-dropDown-links">
+                                 <li> <a href="">test</a></li>
+                                 <li> <a href="">test2</a></li>
+                             </ul>
+                           </div>
+                       </div> -->
+                       <li><a href="/product">Skin Care</a></li>
+                       <li><a href="/product">Personal Care</a></li>
+                       <li><a href="/product">Men</a></li>
+                       <li><a href="/product">Fragrance</a></li>
+                       <li><a href="/product">Health & Wellness</a></li>
+                       <li><a href="/product">Mom & Baby</a></li>
+                     </ul>
+                     <div class="drop-down-link-container-of-products" >
+                      <div class="drop-down-link-container-of-products-links">
+                        <h5>CLENSERS</h5>
+                         <p><a href="/product">Facewash</a></p>
+                         <p><a href="/product">Concealer</a></p>
+                         <p><a href="/product">BB & Creams</a></p>
+                         <p><a href="/product">Foundation</a></p>
+                         <p><a href="/product">Compact</a></p>
+                         <p><a href="/product">Loose Powder</a></p>
+                      </div>
+                      <div class="drop-down-link-container-of-products-links">
+                        <h5>EYE CARE</h5>
+                        <p><a href="/product">Eye Masks & Patches</a></p>
+                         <p><a href="/product">Eye Serum</a></p>
+                         <p><a href="/product">Eye Cream</a></p>
+                         <p><a href="/product">Eye Makeup & Remover</a></p>
+                      </div>
+                      <div class="drop-down-link-container-of-products-links">
+                        <h5>HAND & FOOT CARE</h5>
+                        <p><a href="/product">Hand Wash & Soaps</a></p>
+                         <p><a href="/product">Hand Sanitizers</a></p>
+                         <p><a href="/product">Hand Cream</a></p>
+                         <p><a href="/product">Foot Cream and Scrubs</a></p>
+                      </div>
+                      <div class="drop-down-link-container-of-products-links">
+                        <h5>TONER & FACE MISTS</h5>
+                        <p><a href="/product">Tones</a></p>
+                         <p><a href="/product">Face Mists</a></p>
+                         <p><a href="/product">Lip Care</a></p>
+                         <p><a href="/product">Lip Balms</a></p>
+                         <p><a href="/product">Lip Scrubs</a></p>
+                      </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+              <li><a href="">BRANDS</a></li>
+              <div class="dropdown-content brands">
+                <div class="products-menu-dropDown brandsImages">
+                     <ul class="products-menu-dropDown-links ">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/promo/1502367558_lakme.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1619515921_cloviabotaniqa_logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1542958594_logo-vayam.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226198_sugar-1.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226196_wow-science.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1555930990_nivea-logo-for-website.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226229_plum-3.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1510039591_gv-logo-1.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226150_garnier.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1515076955_logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1611164412_bh-logo-tab-120x55.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226126_ltous.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1481097651_stay-quirky.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1524057339_alps-logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1528376265_purplle-logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1540450028_logo_new.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1626342383_bblunt_120x55.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1626342382_vitress_120x55.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1610961840_sanity-logo.jpg" alt="">
+                       <img src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1530078890_australis-logo.jpg" alt="">
+                     </ul>
+                   </div>
+                </div>
+            </div>
+            <li><a href="">OFFERS</a></li>
+            <li><a href="">NEW</a></li>
+            <li><a href="">SPLURGE</a></li>
+          </ul>
+        </div>
+        <div class="navRight">
+            <div class="icons" id="wishList1">
+              <i class="far fa-heart"></i>
+            </div>
+            <div class="icons" id="signUp1"><a href="/login" style="text-decoration: none; color: rgb(128, 140, 147);"><i class="far fa-smile"></i></a></i>`</div>
+            <div class="icons" id="basket1"><a href="/basket" style="text-decoration: none; color: rgb(128, 140, 147)">
+              <i class="fas fa-shopping-basket"></i></a>
+            </div>
+          </div>
+      </div>
+    </div>
