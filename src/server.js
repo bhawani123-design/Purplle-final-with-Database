@@ -76,6 +76,3 @@ app.listen(2345, async () => {
     console.log('Listening on port 2345');
 })
 
-
-// const bodyParser = require("body-parser");
-// const urlencodedParser = bodyParser.urlencoded({ extended: false });
