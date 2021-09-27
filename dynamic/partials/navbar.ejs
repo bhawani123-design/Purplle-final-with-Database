@@ -42,15 +42,27 @@
             <div class="icons" id="wishList">
               <i class="far fa-heart"></i>
             </div>
-            <div class="icons" id="signUp"><a href="/login" style="text-decoration: none; color: rgb(128, 140, 147);"><i class="far fa-smile"></i></a>`</div>
+            <div class="icons hoverDiv" id="signUp"><a href="/login" style="text-decoration: none; color: rgb(128, 140, 147);"><i class="far fa-smile"></i></a>`
+            <%if(checkLogin1.Email !== undefined){%>
+            <div class="loginDivBox">  
+              <p id="loginId"><%= checkLogin1.Email%> <br> </p>
+              <p id="loginId"><a href="/order">Your Orders</a> <br> </p>
+              <p id="logoutId"> <a href="/login/logout">Logout</a></p>
+            </div>
+            <%} else {%>
+            <div class="loginDivBox">
+              <p id="loginId"><a href="/login"><%= checkLogin1%></a> <br> </p>
+            </div>
+            <%} %>
+            </div>
+            <%if(checkLogin1.Email !== undefined){%>
             <div class="icons" id="basket"><a href="/basket" style="text-decoration: none; color: rgb(128, 140, 147)">
               <i class="fas fa-shopping-basket" ><div id="sum1"><%= sum1%></div></i></a>
             </div>
-            <%if(checkLogin1.Email !== undefined){%>
-            <span id="loginId"><%= checkLogin1.Email%> <br> </span>
-            <span id="logoutId"> <a href="/login/logout">Logout</a></span>
             <%} else {%>
-              <span id="loginId"><a href="/login"><%= checkLogin1%></a> <br> </span>
+              <div class="icons" id="basket"><a onclick="alert('Please Login First')" style="text-decoration: none; color: rgb(128, 140, 147)">
+              <i class="fas fa-shopping-basket" ><div id="sum1"><%= sum1%></div></i></a>
+            </div>
             <%} %>
             
           </div>

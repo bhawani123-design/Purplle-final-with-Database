@@ -132,7 +132,15 @@
           <% products.forEach((el)=>{%>
             <div id="gDiv">
               <img id="gridImage" src=<%=el.image%> alt="">
-              <a href="/cart/<%= el._id%>" onclick="alert('Product added to cart successfully')"><button  id="addToCart"> ADD TO CART</button></a>
+              <%if(checkLogin1.Email !== undefined){%>
+              <a href="/cart/<%= el._id%>" onclick= 
+                "alert('Product added to cart successfully')">
+                <button id="addToCart"> ADD TO CART</button></a>
+                <%} else {%>
+                  <a onclick= 
+                "alert('Please Login First')">
+                <button id="addToCart"> ADD TO CART</button></a>
+                <%}%>
               <p id="proName"><%= el.name%></p>
               <div id="floatAll">
                 &#x20B9 <h3 id="h333"><%=el.price%></h3>&nbsp

@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
 .navMiddleContainer {
   height: 80px;
   display: flex;
@@ -67,6 +74,7 @@
 .address {
   height: 200px;
   margin-left: 3%;
+  margin-top: 32px;
   width: 40%;
   line-height: 1.6;
   padding: 5px 20px;

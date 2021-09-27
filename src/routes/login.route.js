@@ -6,8 +6,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const Signup = require('../models/model.signup')
 const Login = require('../models/model.login');
-const Cart = require('../models/model.cart')
-
 router.get('/', async (req, res) => {
     try {
         // const productDetail = await Price.find().lean().exec();
@@ -20,12 +18,10 @@ router.get('/', async (req, res) => {
 
 router.get('/logout', async (req, res) => {
     try {
-        const cartCount = await Cart.find().lean().exec();
-        let sum1 = 0; console.log("cartCount.length", )
-        cartCount.forEach((el => {
-            sum1 += el.count;
-        }))
-
+        const currentUser = await Login.find().lean().exec();
+        const userProduct = await Signup.findById(currentUser[0]._id);
+        let sum1 = 0;
+        
         await Login.deleteMany();
         let checkLogin1 = 'Please Login';
         res.status(200).render('index', { checkLogin1, sum1 });

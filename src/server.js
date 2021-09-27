@@ -66,6 +66,8 @@ app.use('/login', loginController);
 const signupController = require("./routes/signup.route");
 app.use('/signup', signupController);
 
+const orderController = require("./routes/order.route");
+app.use("/order", orderController);
 
 
 

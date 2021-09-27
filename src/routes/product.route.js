@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Product = require("../models/model.product");
 const Login = require("../models/model.login");
-const Cart = require('../models/model.cart');
+const Signup = require("../models/model.signup");
 
 // router.post('/', async (req, res) => {
 //     try {
@@ -18,19 +18,19 @@ const Cart = require('../models/model.cart');
 
 router.get('/', async (req, res) => {
     try {
-        const cartCount = await Cart.find().lean().exec();
-        let sum1 = 0; 
-        cartCount.forEach((el => {
-            sum1 += el.count;
-        }))
-
         const checkLogin = await Login.find().lean().exec();
-        console.log(checkLogin.length)
         const checkLogin1 = checkLogin[0];
         if (checkLogin.length != 0) {
+            const currentUser = await Login.find().lean().exec();
+            const userProduct = await Signup.findById(currentUser[0]._id);
+            let sum1 = 0;
+            userProduct.holding_product_cnt.forEach((el) => {
+                sum1 += +el;
+            });
             const products = await Product.find().lean().exec();
             res.status(200).render('product/ProductPage', {products, checkLogin1, sum1 });
         } else {
+            let sum1 = 0;
             const products = await Product.find().lean().exec();
             let checkLogin1 = 'Please Login';
             res.status(200).render('product/ProductPage', {products, checkLogin1, sum1 });
@@ -46,11 +46,12 @@ router.get('/', async (req, res) => {
 //Filter by High to Low
 router.get('/htl', async (req, res) => {
     try {
-        const cartCount = await Cart.find().lean().exec();
-        let sum1 = 0; console.log("cartCount.length", )
-        cartCount.forEach((el => {
-            sum1 += el.count;
-        }))
+        const currentUser = await Login.find().lean().exec();
+        const userProduct = await Signup.findById(currentUser[0]._id);
+        let sum1 = 0;
+        userProduct.holding_product_cnt.forEach((el) => {
+            sum1 += +el;
+        });
 
 
         const checkLogin = await Login.find().lean().exec();
@@ -66,9 +67,6 @@ router.get('/htl', async (req, res) => {
             res.render('product/ProductPage', {products, checkLogin1, sum1 });
         }
 
-        // const products = await Product.find().sort({price: -1}).lean().exec();
-        // // const products = await Product.find().lean().exec();
-        // console.log("hello",products);
     } catch (err) {
         res.status(400).send(err.message);
     }
@@ -78,11 +76,12 @@ router.get('/htl', async (req, res) => {
 //Filter by Low to High
 router.get('/lth', async (req, res) => {
     try {
-        const cartCount = await Cart.find().lean().exec();
-        let sum1 = 0; console.log("cartCount.length", )
-        cartCount.forEach((el => {
-            sum1 += el.count;
-        }))
+        const currentUser = await Login.find().lean().exec();
+        const userProduct = await Signup.findById(currentUser[0]._id);
+        let sum1 = 0;
+        userProduct.holding_product_cnt.forEach((el) => {
+            sum1 += +el;
+        });
 
         const checkLogin = await Login.find().lean().exec();
         console.log(checkLogin.length)
@@ -96,10 +95,6 @@ router.get('/lth', async (req, res) => {
             res.status(200).render('product/ProductPage', {products, checkLogin1, sum1 });
         }
 
-
-        // const products = await Product.find().sort({price: 1}).lean().exec();
-        // // const products = await Product.find().lean().exec();
-        // return res.status(200).render('product/ProductPage', {products})
     } catch (err) {
         res.status(400).send(err.message);
     }
@@ -110,11 +105,12 @@ router.get('/lth', async (req, res) => {
 //Filter by brand
 router.get('/:name', async (req, res) => {
     try {
-        const cartCount = await Cart.find().lean().exec();
-        let sum1 = 0; console.log("cartCount.length", )
-        cartCount.forEach((el => {
-            sum1 += el.count;
-        }))
+        const currentUser = await Login.find().lean().exec();
+        const userProduct = await Signup.findById(currentUser[0]._id);
+        let sum1 = 0;
+        userProduct.holding_product_cnt.forEach((el) => {
+            sum1 += +el;
+        });
 
         const checkLogin = await Login.find().lean().exec();
         console.log(checkLogin.length)
@@ -148,11 +144,12 @@ router.get('/:name', async (req, res) => {
 //Filter by price
 router.get('/pr/:id', async (req, res) => {
     try {
-        const cartCount = await Cart.find().lean().exec();
-        let sum1 = 0; console.log("cartCount.length", )
-        cartCount.forEach((el => {
-            sum1 += el.count;
-        }))
+        const currentUser = await Login.find().lean().exec();
+        const userProduct = await Signup.findById(currentUser[0]._id);
+        let sum1 = 0;
+        userProduct.holding_product_cnt.forEach((el) => {
+            sum1 += +el;
+        });
         
 
         console.log(req.params.id)
@@ -204,11 +201,12 @@ router.get('/pr/:id', async (req, res) => {
 //Filter by Discount
 router.get('/ds/:id', async (req, res) => {
     try {
-        const cartCount = await Cart.find().lean().exec();
-        let sum1 = 0; console.log("cartCount.length", )
-        cartCount.forEach((el => {
-            sum1 += el.count;
-        }))
+        const currentUser = await Login.find().lean().exec();
+        const userProduct = await Signup.findById(currentUser[0]._id);
+        let sum1 = 0;
+        userProduct.holding_product_cnt.forEach((el) => {
+            sum1 += +el;
+        });
 
         console.log(req.params.id)
         // let maxPrice = +req.params.id + 100;

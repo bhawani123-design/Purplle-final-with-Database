@@ -38,15 +38,21 @@
                 <i class="fa fa-search icon" id="search-icon"></i>
             </div>
             <div class="icons" id="signUp"><i class="far fa-heart"></i></div>
-            <a href="/login"><div class="icons" id="basket">
-                <i class="far fa-smile"></i>
-            </div></a>
+              <div class="icons hoverDiv" id="basket">
+                <a href="/login"><i class="far fa-smile"></i></a>
             <%if(checkLogin1.Email !== undefined){%>
-            <span id="loginId" class="idForCheckLogin"><%= checkLogin1.Email%> </span>
-            <span id="logoutId"><a href="/login/logout">Logout</a> <br></span>
+            <div class="loginDivBox">
+              <span id="loginId" class="idForCheckLogin"><%= checkLogin1.Email%> </span>
+              <p id="loginId"><a href="/order">Your Orders</a> <br> </p>
+              <span id="logoutId"><a href="/login/logout">Logout</a> <br></span>
+            </div>
             <%} else {%>
+            <div class="loginDivBox">
               <span id="loginId"><a href="/login" class="idForCheckLogin"><%= checkLogin1%></a> <br> </span>
+            </div>
             <%} %>
+            </div>
+             
           </div>
         </div>
     </div>
@@ -69,7 +75,7 @@
         <div class="myCartCount">
           <% sum = 0;
           countt = products.forEach((ell)=>{
-            sum += ell.count;
+            sum += ell.count/1;
               
             })
             %>
@@ -87,7 +93,7 @@
               <img id="fImage" src=<%= el.image%> alt="">
             </div>
             <p id="proName"><%= el.name%></p>
-            <p id="cart_count">Count: (<%= el.count%>)</p>
+            <p id="cart_count">Count: (<%= el.count/1%>)</p>
             
             <p id="proRemove" ><a href="/basket/remove/<%= el._id%>"> Remove</a></p>
             
@@ -110,8 +116,8 @@
         OrderTotal = 0;
         YouSave = 0; 
         products.forEach((el)=>{
-          TotalMrp += el.priceWithDis * el.count;
-          SubTotal += el.price * el.count; 
+          TotalMrp += el.priceWithDis * el.count/1;
+          SubTotal += el.price * el.count/1; 
         })
         SavingOnPrice = TotalMrp - SubTotal;
         OrderTotal = SubTotal+49;

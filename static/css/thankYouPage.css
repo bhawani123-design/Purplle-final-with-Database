@@ -1,218 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
 /* <span id="loginId"><%= checkLogin.Email%> <br> </span>
             <span id="logoutId"> <a href="/login/logout">Logout</a></span> */
 
 .navMiddleContainer {
-  /* display: flex;
+    /* display: flex;
       flex-wrap: wrap;
       width: 100%;
       margin: auto;
       justify-content: center; */
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  margin-bottom: 10px;
-  position: fixed;
-  background-color: white;
-  z-index: 10;
-  top: 0;
-  box-shadow: 0px 0px 4px #2b303185;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+    top: 0;
+    box-shadow: 0px 0px 4px #2b303185;
 }
 #tryElite {
-  width: 50px;
-  height: 40px;
-  margin-bottom: 10px;
+    width: 50px;
+    height: 40px;
+    margin-bottom: 10px;
 }
 .navMid {
-  width: 40%;
+    width: 40%;
 }
 .navMid > img {
-  height: 60.5938px;
-  width: 110px;
+    height: 60.5938px;
+    width: 110px;
 }
 .navMid > img:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 .navRight {
-  width: 40%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 .icons {
-  margin-top: 100px;
-  margin: 20px;
-  font-size: 40px;
-  color: rgb(128, 140, 147);
+    margin-top: 100px;
+    margin: 20px;
+    font-size: 40px;
+    color: rgb(128, 140, 147);
 }
 .icons:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 .navBottom_links li {
-  display: inline;
-  margin: 0px 30px 20px 0px;
-  font-size: 16px;
-  font-weight: 600;
+    display: inline;
+    margin: 0px 30px 20px 0px;
+    font-size: 16px;
+    font-weight: 600;
 }
 .navBottom_links a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 .navBottom_links a:hover {
-  border-bottom: solid 3px rgb(234, 75, 121);
-  transform: scaleX(1);
-  transition: 250ms ease-in-out;
+    border-bottom: solid 3px rgb(234, 75, 121);
+    transform: scaleX(1);
+    transition: 250ms ease-in-out;
 }
 .navBottom_links {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 #search-icon {
-  font-size: 35px;
+    font-size: 35px;
 }
 
 #thankyou-container {
-  margin-top: 127px;
-  width: 60%;
-  min-height: 500px;
-  margin: 8% auto 2%;
-  border: 1px solid #dfdfdf;
-  font-family: sans-serif;
+    margin-top: 127px;
+    width: 60%;
+    margin: 8% auto 2%;
+    border: 1px solid #dfdfdf;
+    font-family: sans-serif;
+    overflow: hidden;
 }
 #tick-mark {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
 }
 
 #tick-mark::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 50%;
-  width: 3px;
-  background-color: #336699;
-  content: "";
-  transform: translateX(10px) rotate(-45deg);
-  transform-origin: left bottom;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 3px;
+    background-color: #336699;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
 }
 
 #tick-mark::after {
-  position: absolute;
-  left: 30;
-  bottom: 0;
-  height: 3px;
-  width: 100%;
-  background-color: #336699;
-  content: "";
-  transform: translateX(10px) rotate(-45deg);
-  transform-origin: left bottom;
+    position: absolute;
+    left: 30;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #336699;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
 }
 .dot {
-  height: 60px;
-  width: 60px;
-  background-color: #e40980;
-  border-radius: 50%;
-  display: inline-block;
-  margin-top: 21px;
-  text-align: center;
-  margin-left: -30px;
-  border: 5px solid white;
+    height: 60px;
+    width: 60px;
+    background-color: #e40980;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 21px;
+    text-align: center;
+    margin-left: -30px;
+    border: 5px solid white;
+    position: absolute;
 }
 .symbol {
-  font-size: 40px;
-  color: #fff;
+    font-size: 40px;
+    color: #fff;
 }
 .para {
-  float: right;
-  margin-top: 23px;
-  line-height: 1.5;
-  margin-right: 41%;
-  letter-spacing: 0.5px;
-  font-size: 12px;
+    float: right;
+    margin-top: 23px;
+    line-height: 1.5;
+    margin-right: 41%;
+    letter-spacing: 0.5px;
+    font-size: 12px;
 }
 .bold {
-  font-weight: bold;
-  font-size: 14px;
+    font-weight: bold;
+    font-size: 14px;
 }
 .thankyou {
-  background-color: #f9d3e8;
-  color: #566770;
-  height: 110px;
+    background-color: #f9d3e8;
+    color: #566770;
+    height: 110px;
 }
 .communication {
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  color: #566770;
-  margin: 3% 2%;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #566770;
+    margin: 3% 2%;
 }
 #order-summary-container {
-  width: 75%;
-  height: 200px;
-  font-family: sans-serif;
-  color: #566770;
-  font-size: 12px;
+    width: 75%;
+    height: 200px;
+    font-family: sans-serif;
+    color: #566770;
+    font-size: 12px;
 
-  line-height: 2.5;
-  letter-spacing: 0.8px;
+    line-height: 2.5;
+    letter-spacing: 0.8px;
 }
 .head {
-  font-size: 14px;
-  font-weight: 550;
+    font-size: 14px;
+    font-weight: 550;
 }
 .order-summary p {
-  margin-left: 4%;
-  line-height: 1;
+    margin-left: 4%;
+    line-height: 2;
+    width: 200px;
 }
 .details {
-  float: right;
-  line-height: 1.7;
-  margin-top: 2%;
-  margin-right: -182px;
-  border: 1px solid rgba(117, 109, 109, 0.274);
-  padding: 5px;
+    float: right;
+    line-height: 1.7;
+    margin-top: 2%;
+    margin-right: -182px;
+    border: 1px solid rgba(117, 109, 109, 0.274);
+    padding: 5px;
 }
 .order-summary {
-  float: left;
+    float: left;
 }
 .continue {
-  margin-left: 45%;
-  background-color: #e40980;
-  padding: 10px 25px;
-  color: #fff;
-  font-size: 15px;
-  letter-spacing: 1.5px;
-  border: none;
+    margin-left: 45%;
+    background-color: #e40980;
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    border: none;
 }
 
 /* For login id & logout */
 
 #loginId {
-  /* border: 1px solid rgb(151, 141, 144); */
-  background-color: rgb(245, 176, 195);
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  top: 67px;
-  box-shadow: 0px 0px 5px #a3b5b9;
-  z-index: 50;
-  right: 107px;
-  color: black;
-  color: #e40980 !important;
+    /* border: 1px solid rgb(151, 141, 144); */
+    background-color: rgb(245, 176, 195);
+    display: block;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #a3b5b9;
+    z-index: 50;
+    color: #e40980;
+    margin: 5px;
+    text-align: center;
 }
 
 #logoutId {
-  /* border: 1px solid rgb(148, 143, 145); */
-  background-color: rgb(245, 176, 195);
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  top: 90px;
-  box-shadow: 0px 0px 5px #a3b5b9;
-  z-index: 50;
-  margin-right: 10px;
-  color: black;
-  color: #e40980 !important;
+    /* border: 1px solid rgb(148, 143, 145); */
+    background-color: rgb(245, 176, 195);
+    display: block;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #a3b5b9;
+    z-index: 50;
+    color: #e40980;
+    margin: 5px;
+    text-align: center;
+}
+
+/* For display count on cart */
+
+#sum1 {
+    font-size: 20px;
+    position: relative;
+    z-index: 10;
+    color: #e40980;
+    text-align: center;
+    bottom: 60px;
+}
+
+/* --------------------------------- */
+.loginDivBox {
+    width: 150px;
+    height: 80px;
+    position: absolute;
+    top: 65px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    display: none;
+    z-index: 2;
+    font-size: 15px;
+    right: 100px;
+}
+
+.hoverDiv:hover > .loginDivBox {
+    display: block;
+}
+
+.li_fetching_byJS {
+    margin-left: 20px;
 }

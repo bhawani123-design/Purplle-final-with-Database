@@ -2,22 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 
-const Price = require('../models/model.price');
-const Cart = require('../models/model.cart');
 const Login = require('../models/model.login');
-
-
-// const checkLogin = await Login.find().lean().exec();
-//         console.log(checkLogin.length)
-//         const checkLogin1 = checkLogin[0];
-//         if (checkLogin.length != 0) {
-//             const products = await Product.find().lean().exec();
-//             res.status(200).render('product/ProductPage', {products, checkLogin1 });
-//         } else {
-//             const products = await Product.find().lean().exec();
-//             let checkLogin1 = 'Please Login';
-//             res.status(200).render('product/ProductPage', {products, checkLogin1 });
-//         }
+const Signup = require("../models/model.signup");
 
 
 router.get('/', async (req, res) => {
@@ -26,28 +12,35 @@ router.get('/', async (req, res) => {
         console.log(checkLogin.length)
         const checkLogin1 = checkLogin[0];
         if (checkLogin.length != 0) {
-            const products = await Cart.find().lean().exec();
+            const currentUser = await Login.find().lean().exec();
+            const userProduct = await Signup.findById(currentUser[0]._id);
+            let prevHistory = userProduct.oreder_history;
+            let orderHistory = [];
+            let recentOrder = [];
+            const date = new Date().toLocaleDateString();
+            orderHistory.push(...prevHistory);
+            for (let i = 0; i < userProduct.holding_product.length; i++) {
+                let name = userProduct.holding_product[i];
+                let count = userProduct.holding_product_cnt[i];
+                orderHistory.push({ name, count, date });
+                recentOrder.push({name, count})
+            }
+
+
+            await Signup.findByIdAndUpdate(userProduct._id, {
+                oreder_history: orderHistory,
+                recent_order: recentOrder,
+                holding_product: [],
+                holding_product_cnt: []
+            });
+            const orderProducts = await Signup.findById(userProduct._id).lean().exec();
+            const products = orderProducts.recent_order;
+
             res.status(200).render('thankyou/thankYouPage.ejs', { products, checkLogin1 });
-        } else {
-            const products = await Cart.find().lean().exec();
-            let checkLogin1 = 'Please Login';
-            res.status(200).render('thankyou/thankYouPage.ejs', { products,  checkLogin1 });
         }
     } catch (err) {
         res.status(400).send(err.message);
     }
 })
-
-router.get('/remove', async (req, res) => {
-    try {
-        await Cart.deleteMany().lean().exec();
-        // return res.send(products);
-        return res.status(200).redirect('/');
-    } catch (err) {
-        res.status(400).send(err.message);
-    }
-})
-
-
 
 module.exports = router;
