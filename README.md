@@ -32,55 +32,55 @@ All the images, icons, and links have taken from the original website (https://w
 
 ## Landing Page
 
-![LandingPage](mainProject/images/LandingPage.png)
+![LandingPage](static/images/LandingPage.png)
 
 This is the landing page of our website. You can see and choose all latest and trending top products from here.
 
 ## SignUp Page
 
-![SignUpPage](mainProject/images/SignupPage.png)
+![SignUpPage](static/images/SignupPage.png)
 
 You can signup with our website from here .
 
 ## Login Page
 
-![LoginPage](mainProject/images/LoginPage.png)
+![LoginPage](static/images/LoginPage.png)
 
 You can login to our website from here by entering required details.
 
 ## Navigation Bar
 
-![NavBar](mainProject/images/NavigationBar.png)
+![NavBar](static/images/NavigationBar.png)
 
 Here, you can choose a category of products whatever you want.
 
 ## Products Page
 
-![ProductsPage](mainProject/images/ProductPage.png)
+![ProductsPage](static/images/ProductPage.png)
 
 Here, you can see all the products and whenever you hover on any product you will see ADD TO CART option, bu clicking the button you can add the products to cart.
 
 ## Cart Page
 
-![CartPage](mainProject/images/CartPage.png)
+![CartPage](static/images/CartPage.png)
 
 Here, you can see all of your products which are added into cart, you can avail the discount by applyling the promocode in respective field and you can remove any product from here also.
 
 ## Address Page
 
-![AddressPage](mainProject/images/AddressPage.png)
+![AddressPage](static/images/AddressPage.png)
 
 In this page you can add your address to where your product should be delivered.
 
 ## Payment Page
 
-![PaymentPage](mainProject/images/PaymentPage.png)
+![PaymentPage](static/images/PaymentPage.png)
 
 You can see lot of payment options here and you can choose any one of them to pay for your product.
 
 ## Summary Page
 
-![ThankyouPage](mainProject/images/SummaryPage.png)
+![ThankyouPage](static/images/SummaryPage.png)
 
 Finally, Here you can see your order details and summary and by clicking continue you will be redirected to home page and you can continue the shopping.
 
