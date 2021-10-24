@@ -1,3 +1,4 @@
+require("dotenv").config();
 const path = require('path');
 const express = require('express');
 const connect = require('./configs/db');
@@ -73,8 +74,12 @@ app.use("/order", orderController);
 
 
 
-app.listen(2345, async () => {
-    await connect();
-    console.log('Listening on port 2345');
+app.listen(process.env.PORT, async () => {
+    try {
+         await connect();
+         console.log(`Listening on port ${process.env.PORT}`);
+    } catch (error) {
+        console.log(error.message)
+    }
 })
 
