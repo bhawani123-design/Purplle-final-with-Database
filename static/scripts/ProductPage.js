@@ -15,11 +15,11 @@ function myFunction() {
 // const wishList1 = document.getElementById("wishList1");
 // const signUP1 = document.getElementById("signUp1");
 // const basket1 = document.getElementById("basket1");
-// // wishList.addEventListener("click", function () {
-// //   window.location.href = "wishlist.html";
-// // });
+//  wishList.addEventListener("click", function () {
+//    window.location.href = "wishlist.html";
+//  });
 // basket1.addEventListener("click", function () {
-//   //console.log("CLICKING");
+//   console.log("CLICKING");
 //   window.location.href = "../basket/basket.html";
 // });
 // signUP1.addEventListener("click", function () {
@@ -327,7 +327,7 @@ function scrolUp() {
 //     arr.push(pro19)
 //     arr.push(pro20)
 
-//     // console.log("arr ", arr)
+//     console.log("arr ", arr)
 
 //     if (localStorage.getItem('productlist') == null) {
 //         localStorage.setItem('productlist', JSON.stringify(arr));
@@ -344,7 +344,7 @@ function scrolUp() {
 //     img.src = el.image;
 
 //     img.setAttribute('id', 'gridImage');
-//     // console.log(img);
+//     console.log(img);
 
 //     let addToCart = document.createElement("button");
 //   addToCart.innerHTML = "ADD TO CART";
@@ -559,9 +559,9 @@ function scrolUp() {
 // function priceRange(){
 //    let pr = productList.filter(function(el){
 //       if(el.price >= 100 && el.price <= 200){
-//         // fatchProducts(el)
+//         fatchProducts(el)
 //         return el
-//       //  console.log(el.price)
+//       console.log(el.price)
 //       }
 //     })
 //     productListDiv.innerHTML = null;
@@ -573,12 +573,12 @@ function scrolUp() {
 // function priceRange1(){
 //    let pr = productList.filter(function(el){
 //       if(el.price >= 200 && el.price <= 300){
-//         // fatchProducts(el)
+//         fatchProducts(el)
 //         return el
-//       //  console.log(el.price)
+//       console.log(el.price)
 //       }
 //     })
-//     // console.log("messae",pr)
+//     console.log("messae",pr)
 //     productListDiv.innerHTML = null;
 //     pr.forEach(function (el) {
 //         createElement(el);
@@ -588,9 +588,9 @@ function scrolUp() {
 // function priceRange2(){
 //    let pr = productList.filter(function(el){
 //       if(el.price >= 300){
-//         // fatchProducts(el)
+//         fatchProducts(el)
 //         return el
-//       //  console.log(el.price)
+//       console.log(el.price)
 //       }
 //     })
 //     productListDiv.innerHTML = null;
@@ -599,14 +599,14 @@ function scrolUp() {
 //     })
 //     fatchProducts(pr)
 // }
-// // fatchProducts(priceRange(productList))
+// fatchProducts(priceRange(productList))
 
 // function discountRange(){
 //   let pr = productList.filter(function(el){
 //       if(el.discount >= 10 && el.discount <= 20){
-//         // fatchProducts(el)
+//         fatchProducts(el)
 //         return el
-//       //  console.log(el.price)
+//       console.log(el.price)
 //       }
 //     })
 //     productListDiv.innerHTML = null;
@@ -618,9 +618,9 @@ function scrolUp() {
 // function discountRange1(){
 //   let pr = productList.filter(function(el){
 //       if(el.discount >= 20 && el.discount <= 30){
-//         // fatchProducts(el)
+//         fatchProducts(el)
 //         return el
-//       //  console.log(el.price)
+//       console.log(el.price)
 //       }
 //     })
 //     productListDiv.innerHTML = null;
@@ -633,7 +633,7 @@ function scrolUp() {
 // function brandDisplay1(){
 //   let pr = productList.filter(function(el){
 //     if(el.brand === "Lakme"){
-//       // console.log(el)
+//       console.log(el)
 //       return el
 //     }
 //   })
@@ -647,7 +647,7 @@ function scrolUp() {
 
 //   let pr = productList.filter(function(el){
 //     if(el.brand === "Wow"){
-//       // console.log(el)
+//       console.log(el)
 //       return el
 //     }
 //   })
@@ -661,7 +661,7 @@ function scrolUp() {
 
 //   let pr = productList.filter(function(el){
 //     if(el.brand === "Mamaearth"){
-//       // console.log(el)
+//       console.log(el)
 //       return el
 //     }
 //   })
@@ -675,7 +675,7 @@ function scrolUp() {
 
 //   let pr = productList.filter(function(el){
 //     if(el.brand === "GoodVibes"){
-//       // console.log(el)
+//       console.log(el)
 //       return el
 //     }
 //   })

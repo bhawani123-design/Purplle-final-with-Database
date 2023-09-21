@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const connect = require('./configs/db');
 const app = new express();
+const port = process.env.PORT || 3002
 const bodyParser = require("body-parser");
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -18,7 +19,7 @@ app.use(express.static(path.join(__dirname, "../static")))
 // const staticPath = path.join(__dirname, "public");
 // app.use(express.static(staticPath))
 
-console.log(path.join(__dirname, "../dynamic/views"))
+// console.log(path.join(__dirname, "../dynamic/views"))
 
 // Register the view engine
 app.set("view engine", "ejs");
@@ -74,10 +75,10 @@ app.use("/order", orderController);
 
 
 
-app.listen(process.env.PORT, async () => {
+app.listen(port, async () => {
     try {
          await connect();
-         console.log(`Listening on port ${process.env.PORT}`);
+         console.log(`Listening on port ${port}`);
     } catch (error) {
         console.log(error.message)
     }

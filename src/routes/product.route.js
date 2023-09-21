@@ -55,7 +55,7 @@ router.get('/htl', async (req, res) => {
 
 
         const checkLogin = await Login.find().lean().exec();
-        console.log(checkLogin.length)
+        // console.log(checkLogin.length)
         const checkLogin1 = checkLogin[0];
         if (checkLogin.length != 0) {
             
@@ -84,7 +84,7 @@ router.get('/lth', async (req, res) => {
         });
 
         const checkLogin = await Login.find().lean().exec();
-        console.log(checkLogin.length)
+        // console.log(checkLogin.length)
         const checkLogin1 = checkLogin[0];
         if (checkLogin.length != 0) {
             const products = await Product.find().sort({price: 1}).lean().exec();
@@ -113,7 +113,7 @@ router.get('/:name', async (req, res) => {
         });
 
         const checkLogin = await Login.find().lean().exec();
-        console.log(checkLogin.length)
+        // console.log(checkLogin.length)
         const checkLogin1 = checkLogin[0];
         if (checkLogin.length != 0) {
             const pr = await Product.find().lean().exec();
@@ -152,12 +152,12 @@ router.get('/pr/:id', async (req, res) => {
         });
         
 
-        console.log(req.params.id)
+        // console.log(req.params.id)
         // let maxPrice = +req.params.id + 100;
         // console.log(req.params.id, maxPrice)
         if (+req.params.id == 100) {
             const checkLogin = await Login.find().lean().exec();
-            console.log(checkLogin.length)
+            // console.log(checkLogin.length)
             const checkLogin1 = checkLogin[0];
             if (checkLogin.length != 0) {
                 const products = await Product.find({ $and: [{ price: {$gte: 100}}, { price: {$lte: 200}}] }).lean().exec();
@@ -169,7 +169,7 @@ router.get('/pr/:id', async (req, res) => {
             }
         } else if (+req.params.id == 200) {
             const checkLogin = await Login.find().lean().exec();
-            console.log(checkLogin.length)
+            // console.log(checkLogin.length)
             const checkLogin1 = checkLogin[0];
             if (checkLogin.length != 0) {
                 const products = await Product.find({ $and: [{ price: {$gte: 200}}, { price: {$lte: 300}}] }).lean().exec();
@@ -181,7 +181,7 @@ router.get('/pr/:id', async (req, res) => {
             }
         } else if (+req.params.id == 300) {
             const checkLogin = await Login.find().lean().exec();
-            console.log(checkLogin.length)
+            // console.log(checkLogin.length)
             const checkLogin1 = checkLogin[0];
             if (checkLogin.length != 0) {
                 const products = await Product.find({ price: { $gte: 300 } }).lean().exec();
@@ -208,12 +208,12 @@ router.get('/ds/:id', async (req, res) => {
             sum1 += +el;
         });
 
-        console.log(req.params.id)
+        // console.log(req.params.id)
         // let maxPrice = +req.params.id + 100;
         // console.log(req.params.id, maxPrice)
         if (+req.params.id == 10) {
             const checkLogin = await Login.find().lean().exec();
-            console.log(checkLogin.length)
+            // console.log(checkLogin.length)
             const checkLogin1 = checkLogin[0];
             if (checkLogin.length != 0) {
                 const products = await Product.find({ $and: [{ discount: {$gte: 10}}, { discount: {$lte: 20}}] }).lean().exec();
@@ -226,7 +226,7 @@ router.get('/ds/:id', async (req, res) => {
             
         } else if (+req.params.id == 20) {
             const checkLogin = await Login.find().lean().exec();
-            console.log(checkLogin.length)
+            // console.log(checkLogin.length)
             const checkLogin1 = checkLogin[0];
             if (checkLogin.length != 0) {
                 const products = await Product.find({ $and: [{ discount: {$gte: 20}}, { discount: {$lte: 30}}] }).lean().exec();
@@ -265,8 +265,8 @@ module.exports = router;
 
 
 //         console.log(req.params.id)
-//         // let maxPrice = +req.params.id + 100;
-//         // console.log(req.params.id, maxPrice)
+//         let maxPrice = +req.params.id + 100;
+//         console.log(req.params.id, maxPrice)
 //         if (+req.params.id == 100) {
 //             const checkLogin = await Login.find().lean().exec();
 //             console.log(checkLogin.length)

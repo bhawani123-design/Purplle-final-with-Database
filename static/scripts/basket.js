@@ -301,7 +301,7 @@ function checkout() {
 //     }
     
 //   })
-//   // console.log(d);
+//   console.log(d);
 
 //   localStorage.setItem('cart', JSON.stringify(d))
 

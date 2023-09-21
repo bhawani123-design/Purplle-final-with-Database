@@ -9,13 +9,13 @@
 //   for (let i = 0; i < usersData.length; i++) {
 //     let u = usersData[i][0].userMobile;
 //     let p = usersData[i][0].userPassword;
-//     //   console.log(u);
-//     //   console.log(p);
+//     console.log(u);
+//     console.log(p);
 
-//     // console.log(mail);
+//     console.log(mail);
 
 //     if (u === username && p === password) {
-//       //  alert("Succeed");
+//       alert("Succeed");
 //       window.location.href = "../index.html";
 //       document.getElementById("mobile").value = null;
 //       document.getElementById("password").value = null;

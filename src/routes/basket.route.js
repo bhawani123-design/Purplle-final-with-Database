@@ -50,7 +50,7 @@ router.get('/', async (req, res) => {
             const allProducts = await Product.find().lean().exec();
             // console.log('allProducts:', allProducts)
             let products = [];
-            console.log(userProducts.holding_product);
+            // console.log(userProducts.holding_product);
             for (let i = 0; i < userProducts.holding_product.length; i++) {
                 for (let j = 0; j < allProducts.length; j++) {
                     if (
@@ -134,7 +134,7 @@ router.get('/remove/:id', async (req, res) => {
                 //      array[array.length] = "1";
                 //      let array2 = updateIdInDb1.holding_product;
                 //      array2[array2.length] = product.name;
-                //      // console.log('array2:', array2)
+                //      console.log('array2:', array2)
 
                 //      await Signup.findByIdAndUpdate(userProduct._id, {
                 //          holding_product_cnt: array,
